@@ -8,6 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { AlertController } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+import { Device } from '@ionic-native/device/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +23,12 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    Device,
+    TextToSpeech,
+    AlertController,
+    SocialSharing,
+    SpeechRecognition,
+    SQLite,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
